@@ -14,18 +14,18 @@ def main():
 def calculate(input_text):
 
     # "X" I play rock, "Y" is paper and "Z" is scissors
-    my_shape = {"X":1, "Y":2, "Z":3}
+    my_shape = {"X": 1, "Y": 2, "Z": 3}
     outcome = {
-            "A X": 3,  # rock, rock - draw
-            "A Y": 6,  # rock, paper - win 
-            "A Z": 0,  # rock, scissors - lose
-            "B X": 0,  # paper, rock - lose
-            "B Y": 3,  # paper, paper - draw
-            "B Z": 6,  # paper, scissors - win
-            "C X": 6,  # scissors, rock - lose
-            "C Y": 0,  # scissoes, paper - win
-            "C Z": 3,  # scissors, scissors - draw
-            }
+        "A X": 3,  # rock, rock - draw
+        "A Y": 6,  # rock, paper - win
+        "A Z": 0,  # rock, scissors - lose
+        "B X": 0,  # paper, rock - lose
+        "B Y": 3,  # paper, paper - draw
+        "B Z": 6,  # paper, scissors - win
+        "C X": 6,  # scissors, rock - lose
+        "C Y": 0,  # scissoes, paper - win
+        "C Z": 3,  # scissors, scissors - draw
+    }
     total_score = 0
     games = Counter(input_text.splitlines())
     for game in games.keys():
