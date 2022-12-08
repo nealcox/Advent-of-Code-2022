@@ -15,9 +15,9 @@ def calculate(input_text):
 
     answer = 0
     for line in input_text.splitlines():
-        i,j,x,y = get_all_ints(line)
+        i, j, x, y = get_all_ints(line)
         if not (x > j or y < i):
-            answer +=1
+            answer += 1
     return answer
 
 
