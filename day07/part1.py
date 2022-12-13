@@ -35,7 +35,7 @@ def calculate(input_text):
                 path.pop()
             else:
                 path.append(to)
-            wd="/".join(path)
+            wd = "/".join(path)
             if wd not in all_dirs:
                 all_dirs.append(wd)
         elif line.startswith("$ ls"):
@@ -43,8 +43,8 @@ def calculate(input_text):
             lsed.add(wd)
 
     sizes = {}
-    while all_dirs: # Added as we found, popping ensures sub-directories
-                    # all have sizes pre-calculated
+    while all_dirs:  # Added as we found, popping ensures sub-directories
+        # all have sizes pre-calculated
         d = all_dirs.pop()
         s = direct_size[d]
         for sub_d in sub_dirs[d]:

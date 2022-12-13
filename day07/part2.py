@@ -35,7 +35,7 @@ def calculate(input_text):
                 path.pop()
             else:
                 path.append(to)
-            wd="/".join(path)
+            wd = "/".join(path)
             if wd not in all_dirs:
                 all_dirs.append(wd)
         elif line.startswith("$ ls"):
@@ -51,7 +51,7 @@ def calculate(input_text):
         sizes[d] = s
 
     to_delete = 30000000 - 70000000 + sizes["/"]
-    return  min(s for s in sizes.values() if s > to_delete)
+    return min(s for s in sizes.values() if s > to_delete)
 
 
 example = """\
